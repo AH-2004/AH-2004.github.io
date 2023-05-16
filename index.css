@@ -1,0 +1,5 @@
+html, body { height: 100%; margin: 0px; background-color: black; }
+
+.center { display: flex; justify-content: center; align-items: center; }
+
+h1 { color: white; font-size: 10em; font-family: system-ui; }
