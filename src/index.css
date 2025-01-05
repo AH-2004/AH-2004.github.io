@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans&display=swap");
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+* {
+	font-family: "IBM Plex Mono";
+	font-size: 1em;
+}
+
+:root {
+	--bg-color: black;
+	--bg-2-color: #141315;
+	--fg-color: #bdbdbd;
+	--accent-color: #c5b2b1;
+	--scroll-bg: rgba(131, 131, 131, 0.1);
+	--scroll-thumb-bg: rgba(129, 129, 129, 0.5);
+	--scroll-thumb-hover-bg: rgba(129, 129, 129, 0.9);
+}
+
+body {
+	background-color: var(--bg-color);
+	color: var(--fg-color);
+	margin: 0px;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow-y: hidden;
+}
+
+p {
+	font-size: medium;
+}
+
+a {
+	color: var(--fg-color);
+	text-decoration: none;
+	font-size: small;
+}
+
+a:hover {
+	color: var(--accent-color);
+    text-decoration: underline;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	background-color: var(--scroll-bg);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--scroll-thumb-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: var(--scroll-thumb-hover-bg);
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--bg-2-color);
+}
+
+.logo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: fit-content;
+	column-gap: 10px;
+}
+
+.logo img {
+	width: 64px;
+	height: 64px;
+}
+
+.logo a {
+	font-size: large;
+}
+
+.logo a:hover {
+	text-decoration: none;
+}
+
+.logo.stylized-a a span {
+	display: none;
+}
+
+.logo.stylized-a a::before {
+	font-family: "IBM Plex Sans";
+	content: "Λ";
+}
+
+.logo.circle-logo {
+	padding: 10px;
+}
+
+.logo.circle-logo img {
+	border-radius: 50%;
+	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.logo.no-logo img {
+	display: none;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: fit-content;
+	column-gap: 20px;
+	padding: 0px 20px;
+}
+
+section {
+	height: 90%;
+	display: flex;
+}
+
+section .sidebar {
+	min-width: 200px;
+	max-width: 20%;
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+	padding: 10px;
+	background-color: var(--bg-2-color);
+	text-overflow: ellipsis;
+	overflow-y: auto;
+}
+
+section .sidebar ul {
+    padding: 0px;
+}
+
+section .sidebar li {
+	padding: 5px 0px;
+    list-style-type: none;
+}
+
+section .sidebar a {
+	display: block;
+	font-size: medium;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+section .content {
+	width: 100%;
+	margin: 10px 0px;
+	overflow-y: auto;
+	line-height: 1.6;
+}
+
+section .content * {
+    margin-bottom: 0.5em;
+}
+
+section .content :is(pre, hr, blockquote) {
+    margin-right: 10px;
+}
+
+section .content :is(h1, h2, h3, h4, h5, h6, strong) {
+    font-weight: bold;
+}
+
+section .content h1 { font-size: 2em; }
+section .content h2 { font-size: 1.5em; }
+section .content h3 { font-size: 1.17em; }
+section .content h4 { font-size: 1em; }
+section .content h5 { font-size: 0.83em; }
+section .content h6 { font-size: 0.67em; }
+section .content em { font-style: italic; }
+
+section .content :is(blockquote, code) {
+    background-color: var(--bg-2-color);
+}
+
+section .content blockquote {
+    border-left: 4px solid var(--accent-color);
+    padding-left: 1em;
+    margin: 1em 0;
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+section .content code {
+    padding: 2px 4px;
+}
+
+pre {
+    background-color: var(--bg-2-color);
+    padding: 10px;
+    overflow: auto;
+    white-space: pre-wrap;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--accent-color);
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+}
+
+th, td {
+    border: 1px solid var(--fg-color);
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--fg-color);
+}
+
+s {
+    text-decoration: line-through;
+    color: var(--accent-color);
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
